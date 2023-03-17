@@ -1,10 +1,6 @@
 #include<stdio.h>
-int main ()
+int main(void)
 {
-	void puts()
-	{
-		printf("\"Programming is like building a multilingual puzzle\n");
-	}
-	puts();
-	return (0);
+	puts("\"Programming is like building a multilingual puzzle");
+	return(0);
 }
