@@ -2,11 +2,11 @@
 /**
  *  print_last_digit - last digit
  *
- *@n: The int to print
+ *@a: The int to print
  * Return: the value of the last digit
  */
 
-int print_last_digit(int n)
+int print_last_digit(int a)
 {
 	if (a > 0)
 		return (a % 10);
