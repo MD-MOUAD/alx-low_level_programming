@@ -7,7 +7,6 @@
 
 void more_numbers(void)
 {
-	char c;
 	int i, n, last_digit;
 
 	for (i = 0 ; i < 10; i++)
