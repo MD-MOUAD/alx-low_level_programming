@@ -14,12 +14,10 @@ void rev_string(char *s)
 		s++;
 	}
 	s--;
-	char arr[len];
 
 	for (i = 0; i < len; i++)
 	{
-		arr[i] = *s;
+		s[i] = *s;
 		s--;
 	}
-	s = arr;
 }
