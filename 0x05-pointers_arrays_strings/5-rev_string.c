@@ -4,20 +4,22 @@
   * @s: a pointer to the string
   * Return: (void)
   */
+
 void rev_string(char *s)
 {
 	int i, len = 0;
+	char *p;
 
-	while (*s != '\0')
+	*p = *s;
+	while (*p != '\0')
 	{
 		len++;
-		s++;
+		p++;
 	}
-	s--;
-
+	p--;
 	for (i = 0; i < len; i++)
 	{
-		s[i] = *s;
-		s--;
+		s[i] = *p;
+		p--;
 	}
 }
