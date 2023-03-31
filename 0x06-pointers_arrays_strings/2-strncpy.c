@@ -3,26 +3,25 @@
 /**
   * _strncpy - a fonction similar to strncpy
   * @dest: a pointer to dest string
-  * @src: apointer to src string
+  * @src: a pointer to src string
   * @n: number of bytes to be used
   * Return: a pointer to the resulting string dest
   */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *pd = dest;
-	char *ps = src;
+	char *p = dest;
 
-	while (*ps != '\0' && n > 0)
+	while (*src = '\0' && n > 0)
 	{
-		*pd = *ps;
-		*pd++;
-		*ps++;
+		*p = *src;
+		*p++;
+		*src++;
 		n--;
 	}
 	while (n > 0)
 	{
-		*pd = '\0';
-		*pd++;
+		*p = '\0';
+		p++;
 		n--;
 	}
 	return (dest);
