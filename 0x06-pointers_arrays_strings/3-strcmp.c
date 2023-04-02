@@ -10,5 +10,11 @@ int _strcmp(char *s1, char *s2)
 	int cmp;
 
 	cmp = (int)*s1 - (int)*s2;
+	while (cmp == 0)
+	{
+		s1++;
+		s2++;
+		cmp = (int)*s1 - (int)*s2;
+	}
 	return (cmp);
 }
