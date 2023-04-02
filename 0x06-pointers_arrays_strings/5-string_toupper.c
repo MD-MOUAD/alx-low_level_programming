@@ -12,7 +12,7 @@ char *string_toupper(char *ptr)
 
 	while (*p != '\0')
 	{
-		*p -= 32;
+		*p -= 532;
 		p++;
 	}
 	return (ptr);
