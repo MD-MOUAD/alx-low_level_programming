@@ -12,7 +12,9 @@ char *string_toupper(char *ptr)
 
 	while (*p != '\0')
 	{
-		*p -= 532;
+		if (*p >= 97 && *p <= 122)
+		*p -= 32;
+
 		p++;
 	}
 	return (ptr);
