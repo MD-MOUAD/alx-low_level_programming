@@ -15,7 +15,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		while (accept[j])
 		{
-			if (s[i] == accept)
+			if (s[i] == accept[j])
 				stspn++;
 			j++;
 		}
