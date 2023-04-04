@@ -17,6 +17,11 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		ps++;
 		n--;
 	}
-	*pd = '\0';
+	while (n > 0)
+	{
+		*pd = '\0';
+		pd++;
+		n--;
+	}
 	return (dest);
 }
