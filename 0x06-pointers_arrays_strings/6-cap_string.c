@@ -21,7 +21,7 @@ char *cap_string(char *str)
 			do {
 				p++;
 			}
-				while (*p >= 97 && *p <= 122 || *p >= 65 && *p <= 90);
+				while (*p == ' ');
 		}
 		else if (*p >= 97 && *p <= 122)
 		{
@@ -29,7 +29,7 @@ char *cap_string(char *str)
 			do {
 				p++;
 			}
-				while (*p >= 97 && *p <= 122 || *p >= 65 && *p <= 90);
+				while (*p == ' ');
 		}
 		else
 			p++;
