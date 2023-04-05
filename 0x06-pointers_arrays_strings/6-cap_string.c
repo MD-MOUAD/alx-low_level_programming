@@ -9,6 +9,7 @@ char *cap_string(char *str)
 {
 	char *p = str;
 	char sepa[] = " \t\n\t\n,;.!?\")(\{\}";
+	int i;
 
 	if (*p >= 'a' && *p <= 'z')
 	{
@@ -19,7 +20,7 @@ char *cap_string(char *str)
 	{
 		for (i = 0; sepa[i]; i++)
 		{
-			if ((*p >= 'a' && *p <= 'z') && *(p - 1) == sepa[j])
+			if ((*p >= 'a' && *p <= 'z') && *(p - 1) == sepa[i])
 			{
 				*p -= 32;
 			}
