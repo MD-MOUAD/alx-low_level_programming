@@ -7,7 +7,7 @@
 char *leet(char *s)
 {
 	char *p = s;
-	char let[] = "AOETL";
+	char let[] = "AEOTL";
 	char dig[] = "43071";
 	int i;
 
