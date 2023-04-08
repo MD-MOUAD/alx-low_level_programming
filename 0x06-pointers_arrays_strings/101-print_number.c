@@ -2,11 +2,11 @@
 /**
  * print_number - a function that prints an integer
  * @n: the number to print
- * Return: print the number
+ * Return: void
  */
 void print_number(int n)
 {
-	int digit, divisor = 1;
+	unsigned int digit, divisor = 1;
 
 	if (n < 0)
 	{
