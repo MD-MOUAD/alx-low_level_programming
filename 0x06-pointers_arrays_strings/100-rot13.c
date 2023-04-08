@@ -6,12 +6,11 @@
  */
 char *rot13(char *s)
 {
-	char *p, lett[53], ro13[53];
+	char *p = s;
+	char lett[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char ro13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i;
 
-	p = s;
-	lett[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	ro13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	while (*p)
 	{
 		for (i = 0; i < 26; i++)
