@@ -18,6 +18,7 @@ char *rot13(char *s)
 			if (*p == lett[i])
 			{
 				*p = ro13[i];
+				break;
 			}
 		}
 		p++;
