@@ -1,6 +1,4 @@
- #include "main.h"
-
-int ten_pow(int x);
+#int ten_pow(int x);
 
 /**
  * print_number - a function that prints an integer
@@ -9,23 +7,24 @@ int ten_pow(int x);
  */
 void print_number(int n)
 {
-	int i, ld, len = 0, a = n;
+	int i, ld, len = 0, a;
 
-	if (a == 0)
+	if (n == 0)
 	{
 		_putchar('0');
 		return;
-	}
-	if (a < 0)
+	}	
+	if (n < 0)
 	{
 		_putchar('-');
-		a = a * (-1);
+		n = n * (-1);
 	}
-	/* calculate the length of n */
+	/* calculate the length of n*/
+	a = n;
 	while (a != 0)
 	{
 		len++;
-		a /= 10;
+		a = a / 10;
 	}
 	for (i = len ; i > 0; i--)
 	{
