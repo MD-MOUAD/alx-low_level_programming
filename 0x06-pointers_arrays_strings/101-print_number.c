@@ -9,7 +9,7 @@ int ten_pow(int x);
  */
 void print_number(int n)
 {
-	int i, ld, len = 0, a = n;
+	int i, ld, len = 0, a;
 
 	if (n == 0)
 	{
@@ -19,8 +19,9 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		a = n * (-1);
+		n = n * (-1);
 	}
+	a = n;
 	/* calculate the length of n*/
 	while (a != 0)
 	{
