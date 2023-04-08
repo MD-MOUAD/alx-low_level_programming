@@ -1,7 +1,4 @@
 #include "main.h"
-
-int ten_pow(int x);
-
 /**
  * print_number - a function that prints an integer
  * @n: the number to print
@@ -9,44 +6,23 @@ int ten_pow(int x);
  */
 void print_number(int n)
 {
-	int i, ld, len = 0, a;
+	int divisor = 1;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
 	if (n < 0)
 	{
-		_putchar(45);
-		n = n * (-1);
+		_putchar('-');
+		n *= -1;
 	}
-	a = n;
-	/* calculate the length of n*/
-	while (a != 0)
+	/* find the largest divisor of n*/
+	while (n / divisor >= 10)
 	{
-		len++;
-		a = a / 10;
+		divisor *= 10;
 	}
-	for (i = len ; i > 0; i--)
+	/* print every digit of n */
+	while (divisor > 0)
 	{
-		a = n / ten_pow(i - 1);
-		ld = a % 10;
-		_putchar('0' + ld);
+		digit = ((n / divisor) % 10);
+		_putchar('0' + digit);
+		divisor /= 10;
 	}
-}
-/**
- * ten_pow - a function that calculate 10 to the power x
- * @x: the power of 10
- * Return: 10 to the power x
- */
-int ten_pow(int x)
-{
-	int i, p = 1;
-
-	for (i = 1; i <= x; i++)
-	{
-		p = p * 10;
-	}
-	return (p);
 }
