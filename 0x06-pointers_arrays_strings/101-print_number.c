@@ -14,7 +14,6 @@ void print_number(int n)
 	if (n == 0)
 	{
 		_putchar('0');
-		return;
 	}
 	if (n < 0)
 	{
@@ -26,7 +25,7 @@ void print_number(int n)
 	while (a != 0)
 	{
 		len++;
-		a = a / 10;
+		a /= 10;
 	}
 	for (i = len ; i > 0; i--)
 	{
