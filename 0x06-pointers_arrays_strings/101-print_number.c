@@ -38,7 +38,7 @@ void print_number(int n)
 		len++;
 		a = a / 10;
 	}
-	for (i = len ; i < 0; i++)
+	for (i = len ; i > 0; i--)
 	{
 		a = n / ten_pow(i - 1);
 		ld = a % 10;
