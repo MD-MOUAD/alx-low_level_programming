@@ -1,4 +1,6 @@
-#int ten_pow(int x);
+#include "main.h"
+
+int ten_pow(int x);
 
 /**
  * print_number - a function that prints an integer
