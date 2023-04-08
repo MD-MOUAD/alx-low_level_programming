@@ -13,7 +13,7 @@ char *rot13(char *s)
 
 	while (*p)
 	{
-		for (i = 0; i < 26; i++)
+		for (i = 0; i < 52; i++)
 		{
 			if (*p == lett[i])
 			{
