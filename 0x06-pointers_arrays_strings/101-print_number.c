@@ -3,21 +3,6 @@ include "main.h"
 int ten_pow(int x);
 
 /**
- * ten_pow - a function that calculate 10 to the power x
- * @x: the power of 10
- * Return: 10 to the power x
- */
-int ten_pow(int x)
-{
-	int i, p = 1;
-
-	for (i = 1; i <= x; i++)
-	{
-		p = p * 10;
-	}
-	return (p);
-}
-/**
  * print_number - a function that prints an integer
  * @n: the number to print
  * Return: print the number
@@ -49,4 +34,19 @@ void print_number(int n)
 		ld = a % 10;
 		_putchar('0' + ld);
 	}
+}
+/**
+ * ten_pow - a function that calculate 10 to the power x
+ * @x: the power of 10
+ * Return: 10 to the power x
+ */
+int ten_pow(int x)
+{
+	int i, p = 1;
+
+	for (i = 1; i <= x; i++)
+	{
+		p = p * 10;
+	}
+	return (p);
 }
