@@ -26,6 +26,11 @@ void print_number(int n)
 {
 	int i, ld, len = 0, a;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}	
 	if (n < 0)
 	{
 		_putchar('-');
