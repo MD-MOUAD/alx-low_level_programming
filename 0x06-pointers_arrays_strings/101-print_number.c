@@ -1,4 +1,7 @@
 include "main.h"
+
+int ten_pow(int x);
+
 /**
  * ten_pow - a function that calculate 10 to the power x
  * @x: the power of 10
