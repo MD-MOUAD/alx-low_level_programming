@@ -1,14 +1,14 @@
 include "main.h"
 /**
- * 10_pow - a function that calculate 10 to the power x
+ * ten_pow - a function that calculate 10 to the power x
  * @x: the power of 10
  * Return: 10 to the power x
  */
-int 10_pow(int x)
+int ten_pow(int x)
 {
 	int i, p = 1;
 
-	for (i = 1; i <= n; i++)
+	for (i = 1; i <= x; i++)
 	{
 		p = p * 10;
 	}
@@ -37,7 +37,7 @@ void print_number(int n)
 	}
 	for (i = len ; i < 0; i++)
 	{
-		a = n / 10_pow(i - 1);
+		a = n / ten_pow(i - 1);
 		ld = a % 10;
 		_putchar('0' + ld);
 	}
