@@ -43,7 +43,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	sum = num1 + num2;
 	for (i = len - 1; i >= 0; i--)
 	{
-		r[i] = sum % 10;
+		r[i] = '0' + (sum % 10);
 		sum /= 10;
 	}
 	return (r);
