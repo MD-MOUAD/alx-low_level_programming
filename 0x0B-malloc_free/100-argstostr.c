@@ -12,7 +12,7 @@ char *argstostr(int ac, char **av)
 	int count , a, b, c;
 
 	count = a = b = c = 0;
-	if (ac == 0 || av == NULL)
+	if (ac == 0 || av == 0)
 		return (NULL);
 	while (a < ac)
 	{
