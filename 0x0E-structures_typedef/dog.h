@@ -16,7 +16,9 @@ struct dog
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 
-/* Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read */
+/**
+ * dog_t - Outside of a dog, a book is a man's best friend.
+ */
 typdef struct dog dog_t;
 
 #endif
