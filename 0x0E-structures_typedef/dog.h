@@ -19,6 +19,6 @@ void print_dog(struct dog *d);
 /**
  * dog_t - Outside of a dog, a book is a man's best friend.
  */
-typdef struct dog dog_t;
+typedef struct dog dog_t;
 
 #endif
