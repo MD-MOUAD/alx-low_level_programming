@@ -29,7 +29,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node->next = NULL;
 	/* if the list is empty set the head to the new node */
 	if (*head == NULL)
+	{
 		*head = new_node;
+		return (*head);
+	}
 	/* Otherwise find the last node in the list and add new node */
 	current_node = *head;
 	while (current_node->next != NULL)
