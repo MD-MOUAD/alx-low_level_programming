@@ -1,4 +1,5 @@
-section .data
+global mai
+nsection .data
     msg db 'Hello, Holberton', 10
 
 section .text
