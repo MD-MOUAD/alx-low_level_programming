@@ -1,5 +1,20 @@
 #include "main.h"
 /**
+ * _strlen - a function that calculate the length of string
+ * @: a pointer to the string
+ * Return: the length of the string
+ */
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while(str[len])
+	{
+		len++;
+	}
+	return (len);
+}
+/**
  * infinite_add - a function that adds two numbers
  * @n1: a pointer to the first number
  * @n2: a pointer to the seconde number
@@ -10,41 +25,32 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int num1, num2, sum, len, i;
-	char *pn1, *pn2;
+	int len1, len2, a, b, i;
+	char *max, *min;
+	char *buffer;
+	
+	max = n1;
+	min = n2;
+	if (_strlen(n2) > _strlen(n1))
+	{
+		max = n2;
+		min = n1;
+	}
 
-	/* convert n1 to int */
-	pn1 = n1;
-	num1 = 0;
-	while (*pn1 != '\0')
+	a = b = 0;
+	for (i = 0; i < _strlen(min); i++)
 	{
-		num1 = (num1 * 10) + (*pn1 - '0');
-		pn1++;
-	}
-	/* convert n2 to int */
-	pn2 = n2;
-	num2 = 0;
-	while (*pn2 != '\0')
-	{
-		num2 = (num2 * 10) + (*pn2 - '0');
-		pn2++;
-	}
-	sum = num1 + num2;
-	/* calculate the lentgh of sum */
-	len = 0;
-	while (sum > 0)
-	{
-		len++;
-		sum /= 10;
-	}
-	if (size_r <= len)
-		return (0);
-	/* convert sum to char */
-	sum = num1 + num2;
-	for (i = len - 1; i >= 0; i--)
-	{
-		r[i] = '0' + (sum % 10);
-		sum /= 10;
-	}
-	return (r);
-}
+		a += *(max--) - '0';
+		b += *(min--) - '0';
+		if ((a + b) > 9)
+		{
+		}
+
+
+
+
+
+
+		
+
+
