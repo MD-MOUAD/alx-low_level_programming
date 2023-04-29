@@ -2,7 +2,7 @@
 /**
  * listint_len - a function that returns the number of
  * elements in a linked list.
- * @h: a list_t list
+ * @h: a listint_t list
  * Return: number of elements
  */
 size_t listint_len(const listint_t *h)
