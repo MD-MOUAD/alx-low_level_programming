@@ -4,7 +4,7 @@
  * of a listint_t list.
  * @head: a listint_t list.
  * @n: the element to add.
- * Return: the list.
+ * Return: the address of the new element, or NULL if it faile
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
