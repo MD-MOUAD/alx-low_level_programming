@@ -25,32 +25,10 @@ int _strlen(char *str)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1, len2, a, b, i;
-	char *max, *min;
-	char *buffer;
-	
-	max = n1;
-	min = n2;
-	if (_strlen(n2) > _strlen(n1))
+	int i, j, n1, n2, remain, sum;
+
+	i = j = sum = 0;
+	while(*n1 != '\0' && *n2 != '\0')
 	{
-		max = n2;
-		min = n1;
-	}
-
-	a = b = 0;
-	for (i = 0; i < _strlen(min); i++)
-	{
-		a += *(max--) - '0';
-		b += *(min--) - '0';
-		if ((a + b) > 9)
-		{
-		}
-
-
-
-
-
-
-		
 
 
