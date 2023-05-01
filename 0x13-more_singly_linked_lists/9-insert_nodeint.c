@@ -22,6 +22,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	l = *head;
 	p = NULL;
 
+	if (idx == 0)
+	{
+		new->next = l;
+		l = new;
+		return (new);
+	}
+
 	for (i = 0; i < idx; i++)
 	{
 		if (l->next != NULL)
@@ -34,15 +41,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	/* p now is the (idx - 1)th node, and new will be inserted after it */
 	/* l now is the (idx)th node, and new will be inserted before it */
-
-	/* case the list contains only one node*/
-	if (p == NULL)
-	{
-		new->next = l;
-	}
-	else
-	{
-		p->next = new;
-		new->next = l;
-	}
+	p->next = new;
+	new->next = l;
+	return (new);
 }
