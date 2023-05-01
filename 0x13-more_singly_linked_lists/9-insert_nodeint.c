@@ -33,11 +33,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			new->next = (*head)->next;
 			(*head)->next = new;
+			*head = h;
 			return (new);
 		}
 		i++;
 		*head = (*head)->next;
 	}
-	*head = h;
 	return (NULL);
 }
