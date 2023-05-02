@@ -4,8 +4,7 @@
  * of a listint_t linked list
  * and returns the head node’s data (n).
  * @head: double pointer to the list.
- * Return: the head node's data (n),
- * or 0 if the list is empty.
+ * Return: the head node's data (n), or 0 if the list is empty.
  */
 int pop_listint(listint_t **head)
 {
@@ -16,8 +15,8 @@ int pop_listint(listint_t **head)
 		return (0);
 
 	n = (*head)->n;
-	tmp = (*head)->next;
-	free(*head);
-	*head = tmp;
+	tmp = *head;
+	*head = (*head->next)
+	free(tmp);
 	return (n);
 }
