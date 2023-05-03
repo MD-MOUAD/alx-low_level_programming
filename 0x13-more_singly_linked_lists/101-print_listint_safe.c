@@ -7,12 +7,12 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	int count, flag = 0;
+	int i, flag;
 
 	if (head == NULL)
 		return (0);
 
-	for (count = 0; (head != NULL || flag); count++)
+	for (i = flag = 0; head != NULL || flag; i++)
 	{
 		printf("[%p] %d\n", (void *) head, head->n);
 
@@ -30,8 +30,8 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		head = head->next;
 		printf("-> [%p] %d\n", (void *) head, head->n);
-		count++;
+		i++;
 	}
 
-	return (count);
+	return (i);
 }
