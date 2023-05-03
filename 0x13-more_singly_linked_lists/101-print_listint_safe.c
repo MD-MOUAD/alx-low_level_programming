@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_listint - a function that prints a listint_t linked list
+ * print_listint_safe - a function that prints a listint_t linked list
  * This function can print lists with a loop.
  * @head: head of the list.
  * Return: the number of nodes in the list.
