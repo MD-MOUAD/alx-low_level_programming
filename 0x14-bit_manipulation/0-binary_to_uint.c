@@ -20,7 +20,10 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 	for (--i, mul = 0 ; i >= 0; i--, mul++)
-		dec = dec + ((b[i] - '0') << mul);
+	{
+		if (b[i] == '1')
+			dec += 1 << mul;
+	}
 
 	return (dec);
 }
