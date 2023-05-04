@@ -5,7 +5,7 @@
  *
  * Return: (void);
  */
-void print_binary(unsigned long int n);
+void print_binary(unsigned long int n)
 {
 	unsigned long int r;
 
@@ -14,5 +14,9 @@ void print_binary(unsigned long int n);
 		_putchar('0');
 		return;
 	}
+	if(n > 1)
+		print_binary(n >> 1);
 
+	r = n & 1;
+	putchar('0'+ r);
 }
