@@ -13,16 +13,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int i, len = 0;
 	int bit;
 
-	if (n == 0)
-		return (-1);
-
-	aux = n;
-	while (aux)
-	{
-		aux = aux >> 1;
-		len++;
-	}
-	if (index >= len)
+	if (index >= 32)
 		return (-1);
 
 	bit = (n >> index) & 1;
