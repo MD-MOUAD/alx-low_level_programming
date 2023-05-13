@@ -24,7 +24,6 @@ int main(int argc, char **argv)
 	if (fd_from == -1)
 		print_error("Error: Can't read from file ", argv[1], 98);
 
-
 	fd_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd_to == -1)
 	{
@@ -47,6 +46,8 @@ int main(int argc, char **argv)
 		print_error("Error: Can't read from file ", argv[1], 98);
 	close_fd(fd_from);
 	close_fd(fd_to);
+
+	return (0);
 }
 /**
  * close_fd - close file descriptor
