@@ -15,11 +15,11 @@ char *reverse_string(char *str)
 	while (*(end + 1))
 		end++;
 	for (; start < end; start++, end--)
-		{
-			tmp = *start;
-			*start = *end;
-			*end = tmp;
-		}
+	{
+		tmp = *start;
+		*start = *end;
+		*end = tmp;
+	}
 	return (str);
 }
 /**
