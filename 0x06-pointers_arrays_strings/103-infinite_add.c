@@ -7,13 +7,19 @@
  */
 char *reverse_string(char *str)
 {
-	char *start, *end;
+	char *start, *end, tmp;
 
+	if (!str)
+		return (0);
 	start = end = str;
 	while (*(end + 1))
 		end++;
 	for (; start < end; start++, end--)
-		*start = *end;
+		{
+			tmp = *start;
+			*start = *end;
+			*end = tmp;
+		}
 	return (str);
 }
 /**
@@ -50,16 +56,16 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		maxlen = len2;
 	if (size_r <= maxlen)
 		return (0);
-	for (len1--, len2--; len1 || len2; len1--, len2--)
+	for (; len1 > 0 || len2 > 0; len1--, len2--)
 	{
-		if (len1 == 0)
+		if (len1 <= 0)
 			num1 = 0;
 		else
-			num1 = n1[len1] - '0';
-		if (len2 == 0)
+			num1 = n1[len1 - 1] - '0';
+		if (len2 <= 0)
 			num2 = 0;
 		else
-			num2 = n2[len2] - '0';
+			num2 = n2[len2 - 1] - '0';
 		sum = num1 + num2 + remain;
 		if (sum > 9)
 		{
@@ -75,7 +81,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (size_r <= maxlen + 1)
 			return (0);
 		r[i++] = '1';
-		r[i] = '\0';
 	}
+	r[i] = '\0';
 	return (reverse_string(r));
 }
