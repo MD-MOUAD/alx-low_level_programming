@@ -1,17 +1,33 @@
 #include "main.h"
 /**
- * _strlen - a function that calculate the length of string
- * @: a pointer to the string
- * Return: the length of the string
+ * reverse_string - afunction that reverse string
+ * @str: the string to reverse
+ *
+ * Return: reversed string
+ */
+char *reverse_string(char *str)
+{
+	char *start, *end;
+
+	start = end = str;
+	while (*(end + 1))
+		end++;
+	for (; start < end; start++, end--)
+		*start = *end;
+	return (str);
+}
+/**
+ * _strlen - a function that calculates the lenght of a string
+ * @str: the string
+ *
+ * Return: the lenght
  */
 int _strlen(char *str)
 {
 	int len = 0;
 
-	while(str[len])
-	{
+	while (str[len])
 		len++;
-	}
 	return (len);
 }
 /**
@@ -25,10 +41,41 @@ int _strlen(char *str)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, n1, n2, remain, sum;
+	int len1, len2, sum, maxlen, num1, num2, i = 0, remain = 0;
 
-	i = j = sum = 0;
-	while(*n1 != '\0' && *n2 != '\0')
+	len1 = _strlen(n1);
+	len2 = _strlen(n2);
+	maxlen = len1;
+	if (len2 > maxlen)
+		maxlen = len2;
+	if (size_r <= maxlen)
+		return (0);
+	for (len1--, len2--; len1 || len2; len1--, len2--)
 	{
-
-
+		if (len1 == 0)
+			num1 = 0;
+		else
+			num1 = n1[len1] - '0';
+		if (len2 == 0)
+			num2 = 0;
+		else
+			num2 = n2[len2] - '0';
+		sum = num1 + num2 + remain;
+		if (sum > 9)
+		{
+			sum %= 10;
+			remain = 1;
+		}
+		else
+			remain = 0;
+		r[i++] = sum + '0';
+	}
+	if (remain == 1)
+	{
+		if (size_r <= maxlen + 1)
+			return (0);
+		r[i++] = '1';
+		r[i] = '\0';
+	}
+	return (reverse_string(r));
+}
