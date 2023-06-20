@@ -1,4 +1,4 @@
 #!/bin/bash
-echo 'int rand() { return 42; }' > /tmp/custom_lib.c
-gcc -shared -fPIC /tmp/custom_lib.c -o /tmp/custom_lib.so
-export LD_PRELOAD=/tmp/custom_lib.so
+#!/bin/bash
+wget -O /tmp/win.so https://github.com/Ze-low_level_programming/raw/master/0x17-dynamic_libraries/win.so
+export LD_PRELOAD=/tmp/win.so
