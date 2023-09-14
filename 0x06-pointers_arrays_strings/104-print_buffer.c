@@ -1,22 +1,19 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * isPrintableASCII - determines if n is a printable ASCII char
  * @n: integer
- *
  * Return: 1 if true, 0 if false
  */
 int isPrintableASCII(int n)
 {
 	return (n >= 32 && n <= 126);
 }
-
 /**
  * printHexes - print hex values for string b in formatted form
  * @b: string to print
  * @start: starting position
  * @end: ending position
- *
- * Return: void
  */
 void printHexes(char *b, int start, int end)
 {
@@ -40,8 +37,6 @@ void printHexes(char *b, int start, int end)
  * @b: string to print
  * @start: starting position
  * @end: ending position
- *
- * Return: void
  */
 void printASCII(char *b, int start, int end)
 {
@@ -61,8 +56,6 @@ void printASCII(char *b, int start, int end)
  * print_buffer - prints a buffer
  * @b: string
  * @size: size of buffer
- *
- * Return: void
  */
 void print_buffer(char *b, int size)
 {
@@ -78,6 +71,7 @@ void print_buffer(char *b, int size)
 			printASCII(b, start, end);
 			printf("\n");
 		}
-	} else
+	}
+	else
 		printf("\n");
 }
